@@ -249,7 +249,6 @@ function AllCraftDeconMenu()
 		}
 	}
 }
-
 table.insert(options, ACLoadMenu())
 
   menu:RegisterAddonPanel("AllCraftDeconstructor", panel)
