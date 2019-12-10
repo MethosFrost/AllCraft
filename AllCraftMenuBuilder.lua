@@ -12,11 +12,11 @@ end
 
 local function CheckboxMenuAdd(settingName)
     local set = settingName
-
     local setting = AllCraft_Decon.deconSettings
-    d(setting.set)
+--Find a way to get this to populate properly, Answer is always nil
     local functionGet =  function() return setting.set end
     local functionSet = function(value) setting.set = value end
+
     local x = {}
         x.type = "checkbox"
         x.name = tostring(settingName)
@@ -31,7 +31,7 @@ function ACLoadMenu()
     local menu = {type = "submenu",
     name = "Table Options",
     controls = {}}
-    
+
     for key, value in pairs(t) do
         if key ~= "version" then
             if string.find( key,"Deconstruct_Set_Type_") then
