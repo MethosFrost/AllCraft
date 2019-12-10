@@ -77,7 +77,6 @@ local function AddonInitialize(event, addonName)
 	EVENT_MANAGER:UnregisterForEvent(AllCraft.name, EVENT_ADD_ON_LOADED)
 
 	EventRegistration()
-	
 	AllCraftDeconMenu()
 end
 

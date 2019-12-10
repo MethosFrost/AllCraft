@@ -2,7 +2,6 @@ AllCraft_Decon = {}
 AllCraft_Decon.name = AllCraft_Decon
 LSet = LibSets
 
-
 --{Features to add
 --Mass Deconstruct Experiance:
 --Hot key overwrite on Gamepad as needed reseting original settings on exit
