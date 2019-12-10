@@ -252,6 +252,7 @@ function AllCraftDeconMenu()
 
 table.insert(options, ACLoadMenu())
 
-  menu:RegisterAddonPanel("AllCraftDeconstructor", panel)
-  menu:RegisterOptionControls("AllCraftDeconstructor", options)
+--Populate menu
+	menu:RegisterAddonPanel("AllCraftDeconstructor", panel)
+	menu:RegisterOptionControls("AllCraftDeconstructor", options)
 end
