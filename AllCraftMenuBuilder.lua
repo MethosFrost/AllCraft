@@ -10,16 +10,9 @@ function ACMB.TTCSliderDisable()
     return false
 end
 
-local function CheckboxItem()
---[[type = "checkbox",
-name = "Deconstruct crafted items",
-getFunc = function() return set.DeconstructCrafted end,
-setFunc = function(value) set.DeconstructCrafted = value end,]]--
-end
-
 local function CheckboxMenuAdd(settingName)
     local set = settingName
-    
+
     local setting = AllCraft_Decon.deconSettings
     d(setting.set)
     local functionGet =  function() return setting.set end
