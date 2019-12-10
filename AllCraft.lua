@@ -82,5 +82,4 @@ end
 
 --**TODO** register for events only near crafting stations?
 
-
 EVENT_MANAGER:RegisterForEvent(AllCraft.name, EVENT_ADD_ON_LOADED, AddonInitialize)

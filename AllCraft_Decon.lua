@@ -18,7 +18,6 @@ LSet = LibSets
 --Option: Maximum Quality to Deconstruct at Max Extraction
 --Static: While player has writ quests do not deconstruct
 
-
 --Selectable settings
 AllCraft_Decon.deconSettings = {}
 
