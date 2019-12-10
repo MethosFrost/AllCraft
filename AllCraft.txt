@@ -15,9 +15,6 @@
 ## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
 ##
 
-
-
-
 --{Features to add
 Use Localaization files for all text default to english
 
