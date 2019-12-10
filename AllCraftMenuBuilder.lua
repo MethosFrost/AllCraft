@@ -19,6 +19,7 @@ end
 
 local function CheckboxMenuAdd(settingName)
     local set = settingName
+    
     local setting = AllCraft_Decon.deconSettings
     d(setting.set)
     local functionGet =  function() return setting.set end
