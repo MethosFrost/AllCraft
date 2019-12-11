@@ -15,6 +15,7 @@
 ##
 
 
+LibAddonMenu-2.0.lua
 
 AllCraftMenuBuilder.lua
 AllCraft_CharacterInfo.lua

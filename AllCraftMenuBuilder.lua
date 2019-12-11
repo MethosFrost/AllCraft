@@ -14,12 +14,12 @@ local function CheckboxMenuAdd(settingName)
     local set = settingName
     local setting = AllCraft_Decon.deconSettings
 --Find a way to get this to populate properly, Answer is always nil
-    local functionGet =  function() return setting.set end
-    local functionSet = function(value) setting.set = value end
+    local functionGet =  function() return setting[set] end
+    local functionSet = function(value) setting[set] = value end
 
     local x = {}
         x.type = "checkbox"
-        x.name = tostring(settingName)
+        x.name = settingName
         x.getFunc = functionGet
         x.setFunc = functionSet
     return x
@@ -29,7 +29,7 @@ function ACLoadMenu()
     local t = getmetatable(AllCraft_Decon.deconSettings).__index
     local setting = AllCraft_Decon.deconSettings
     local menu = {type = "submenu",
-    name = "Table Options",
+    name = "Set Deconstruction Options",
     controls = {}}
 
     for key, value in pairs(t) do
