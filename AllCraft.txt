@@ -17,10 +17,11 @@
 
 LibAddonMenu-2.0.lua
 
+
 AllCraftMenuBuilder.lua
 AllCraft_CharacterInfo.lua
 AllCraft_DeconMenu.lua
-AllCraft_Decon.lua
 bindings.xml
+AllCraft_Decon.lua
 AllCraft_DailyWrits.lua
 AllCraft.lua

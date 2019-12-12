@@ -110,9 +110,10 @@ function AllCraftDeconMenu()
     },
     {
       type = "checkbox",
-      name = "Deconstruct set pieces",
-      getFunc = function() return set.DeconstructSetPiece end,
-      setFunc = function(value) set.DeconstructSetPiece = value end,
+	  name = "Deconstruct set pieces",
+	  warning = "Reload UI for additional set options.",
+      getFunc = function() return set.Deconstruct_Set_Items end,
+      setFunc = function(value) set.Deconstruct_Set_Items = value end,
     },
     {
       type = "checkbox",
@@ -249,8 +250,9 @@ function AllCraftDeconMenu()
 		}
 	}
 }
-
-table.insert(options, ACLoadMenu())
+local AddSets = ACLoadMenu()
+d(AddSets)
+if not AddSets == nil then table.insert(options,AddSets ) end
 
 --Populate menu
 	menu:RegisterAddonPanel("AllCraftDeconstructor", panel)
