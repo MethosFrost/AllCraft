@@ -251,8 +251,7 @@ function AllCraftDeconMenu()
 	}
 }
 local AddSets = ACLoadMenu()
-d(AddSets)
-if not AddSets == nil then table.insert(options,AddSets ) end
+if set.Deconstruct_Set_Items then table.insert(options,AddSets ) end
 
 --Populate menu
 	menu:RegisterAddonPanel("AllCraftDeconstructor", panel)

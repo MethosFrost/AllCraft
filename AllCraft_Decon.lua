@@ -19,7 +19,44 @@ LSet = LibSets
 --Static: While player has writ quests do not deconstruct
 
 --Selectable settings
-
+AllCraft_Decon.deconSettings = {}
+AllCraft_Decon.deconDefaults = {
+	DebugOn = false,
+	SmartSettings = true,
+	ListBeforeDeconstruct = true,
+	AccountWide = true,
+	PricingOn = true,
+	UseBank = true,
+	KeepCertMats = true,
+	DeconstructBound = false,
+	Deconstruct_Set_Items = false,
+	Deconstruct_Set_Type_Crafted = false,
+	Deconstruct_Set_Type_Monster = false,
+	Deconstruct_Set_Type_Dungeon = true,
+	Deconstruct_Set_Type_Trial = false,
+	Deconstruct_Set_Type_Arena = true,
+	Deconstruct_Set_Type_Overland = true,
+	Deconstruct_Set_Type_Cyrodiil = true,
+	Deconstruct_Set_Type_Battleground = true,
+	Deconstruct_Set_Type_Imperial_City = true,
+	Deconstruct_Set_Type_Special = true,
+	Deconstruct_Set_Type_Daily_Reward = true,
+	DeconstructOrnate = false,
+	DeconstructCrafted = false,
+	MMMax = 1000,
+	TTCMax = 1000,
+	DeconstructIntricate = true,
+	maxNormBlacksmith	= 3,
+	maxMasterBlacksmith = 4,
+	maxNormClothier	= 3,
+	maxMasterClothier = 4,
+	maxNormJewler	= 3,
+	maxMasterJewler = 4,
+	maxNormWoodworker	= 3,
+	maxMasterWoodworker = 4,
+	maxNormEnchanting	= 3,
+	maxMasterEnchanting = 4,
+}
 --Management
 local function DebugMessage(message)
   if AllCraft_Decon.deconSettings.DebugOn then
@@ -217,19 +254,19 @@ local function ShouldDecon(bagId, slotIndex, itemLink, craftTableType)
 	--Option: Set
 	IsSet,SetName,SetID = LSet.IsSetByItemLink(itemLink)
 	if IsSet then
-		if not AllCraft_Decon.deconSettings.DeconstructSetPiece then return false end
+		if not AllCraft_Decon.deconSettings.Deconstruct_Set_Items then return false end
 		
-		if LSet.IsCraftedSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetCrafted then return false end
-		if LSet.IsMonsterSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetMonster then return false end
-		if LSet.IsDungeonSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetDungeon then return false end
-		if LSet.IsTrialSet(SetID) and not AllCraft_Decon.deconSettings.DecondtructSetTrial then return false end
-		if LSet.IsArenaSet(SetID) and not AllCraft_Decon.deconSettings.DecondtructSetArena then return false end
-		if LSet.IsOverlandSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetOverland then return false end
-		if LSet.IsCyrodiilSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetCyrodiil then return false end
-		if LSet.IsBattlegroundSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetBattleground then return false end
-		if LSet.IsImperialCitySet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetImperialCity then return false end
-		if LSet.IsSpecialSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetSpecial then return false end
-		if LSet.IsDailyRandomDungeonAndImperialCityRewardSet(SetID) and not AllCraft_Decon.deconSettings.DeconstructSetDailyReward then return false end
+		if LSet.IsCraftedSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Crafted then return false end
+		if LSet.IsMonsterSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Monster then return false end
+		if LSet.IsDungeonSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Dungeon then return false end
+		if LSet.IsTrialSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Trial then return false end
+		if LSet.IsArenaSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Arena then return false end
+		if LSet.IsOverlandSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Overland then return false end
+		if LSet.IsCyrodiilSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Cyrodiil then return false end
+		if LSet.IsBattlegroundSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Battleground then return false end
+		if LSet.IsImperialCitySet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Imperial_City then return false end
+		if LSet.IsSpecialSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Special then return false end
+		if LSet.IsDailyRandomDungeonAndImperialCityRewardSet(SetID) and not AllCraft_Decon.deconSettings.Deconstruct_Set_Type_Daily_Reward then return false end
 
 	end
 
